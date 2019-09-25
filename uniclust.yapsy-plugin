@@ -1,0 +1,9 @@
+[Core]
+Name = BiomajUniclustDownloader
+Module = uniclust
+
+[Documentation]
+Author = Olivier Sallou
+Version = 0.1
+Website =
+Description = Uniclust downloader (http://gwdu111.gwdg.de/~compbiol/uniclust/2018_08/)

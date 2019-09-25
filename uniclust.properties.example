@@ -1,0 +1,22 @@
+[GENERAL]
+
+db.fullname="plugin to download uniclust30 hhsuite files"
+db.name=uniclust30
+db.type=hhsuite
+
+offline.dir.name=offline/test/uniclust30_tmp
+dir.version=examples/uniclust
+
+plugins_dir=/opt/biomaj-plugins
+release.plugin=uniclust
+release.plugin_args=regexp=uniclust30_(\d+_\d+)_hhsuite\.tar\.gz
+
+protocol=directhttp
+server=gwdu111.gwdg.de
+remote.plugin=uniclust
+# Comma separated list of key=value parameters (plugin dependent)
+remote.plugin_args=
+remote.dir=
+
+local.files=.*
+
