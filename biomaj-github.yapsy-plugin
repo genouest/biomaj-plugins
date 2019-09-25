@@ -1,0 +1,9 @@
+[Core]
+Name = BiomajGithubDownloader
+Module = biomaj-github
+
+[Documentation]
+Author = Olivier Sallou
+Version = 0.1
+Website =
+Description = GitHub downloader
