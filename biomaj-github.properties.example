@@ -1,0 +1,22 @@
+[GENERAL]
+
+db.fullname="plugin to download github release files"
+db.name=github_release_example
+db.type=github
+
+offline.dir.name=offline/test/github_release_example_tmp
+dir.version=examples
+
+plugins_dir=/opt/biomaj-plugins
+release.plugin=github
+release.plugin_args=repo=osallou/goterra-cli
+
+protocol=directhttps
+server=github.com
+remote.plugin=github
+# Comma separated list of key=value parameters (plugin dependent)
+remote.plugin_args=repo=osallou/goterra-cli
+remote.dir=
+
+local.files=.*
+
