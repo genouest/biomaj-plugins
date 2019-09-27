@@ -1,0 +1,9 @@
+[Core]
+Name = BiomajTestDownloader
+Module = test
+
+[Documentation]
+Author = Olivier Sallou
+Version = 0.1
+Website =
+Description = sample test

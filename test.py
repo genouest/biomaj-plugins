@@ -1,0 +1,37 @@
+import requests
+import dateutil.parser
+import logging
+import os
+
+from yapsy.IPlugin import IPlugin
+
+class BiomajTestDownloader(IPlugin):
+
+    def configure(self, options):
+        self.options = options
+
+    def name(self):
+        return "test"
+
+    def release(self):
+        return "test"
+
+    def list(self, release_name=None):
+        remote_files= [{
+                'name': 'hello.md',
+                'save_as': 'hello.md',
+                'permissions': '',
+                'group': '',
+                'size': 0,
+                'year': 2019,
+                'month': 9,
+                'day': 1,
+                'hash': None
+        }]
+        return remote_files
+
+    def download(self, release_name, files_to_download, offline_dir=None):
+        with open(os.path.join(offline_dir, 'hello.md'), 'w') as f:
+            f.write('# Hello\n\n world\n')
+        return True
+
