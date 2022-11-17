@@ -19,7 +19,7 @@ class BiomajTestDownloader(IPlugin):
     def list(self, release_name=None):
         remote_files= [{
                 'name': 'hello.md',
-                'save_as': 'hello.md',
+                'save_as': 'hellosave.md',
                 'permissions': '',
                 'group': '',
                 'size': 0,
@@ -31,7 +31,9 @@ class BiomajTestDownloader(IPlugin):
         return remote_files
 
     def download(self, release_name, files_to_download, offline_dir=None):
-        with open(os.path.join(offline_dir, 'hello.md'), 'w') as f:
-            f.write('# Hello\n\n world\n')
+        logging.debug('[plugin][test][download] ' + str(release_name) + ': ' + str(files_to_download))
+        for f in files_to_download:
+            with open(os.path.join(offline_dir, f['save_as']), 'w') as f:
+                f.write('# Hello\n\n world\n')
         return True
 
